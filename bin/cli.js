@@ -22,7 +22,7 @@ program
     getRepoLoading.start();
     const data = await getGitReposList(username);
     const templates = data?.filter((item) => item?.name?.includes("study"));
-    console.log("templates---{}", templates);
+    // console.log("templates---{}", templates);
 
     getRepoLoading.succeed("获取模版列表成功!");
     // 1. 从模版列表中找到对应的模版
@@ -54,7 +54,7 @@ program
       });
       projectTemplate = template; // 赋值选择的项目名称
     }
-    console.log("模版：", projectTemplate);
+    console.log("选择模版：", projectTemplate);
 
     // 获取目标文件夹路径
     const dest = path.join(process.cwd(), projectName);
