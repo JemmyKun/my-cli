@@ -6,7 +6,7 @@ const downloadGitRepo = require("download-git-repo");
 const ora = require("ora"); // 引入ora
 const fs = require("fs-extra");
 
-// const templates = require("./templates.js")
+const templates = require("./templates.js")
 const { getGitReposList } = require("./api.js");
 const package = require("../package.json");
 
@@ -20,8 +20,9 @@ program
       "获取模版列表 from [https://github.com/JemmyKun]`..."
     );
     getRepoLoading.start();
-    const data = await getGitReposList(username);
-    const templates = data?.filter((item) => item?.name?.includes("study"));
+    // const data = await getGitReposList(username);
+    // console.log('data========={}',data);
+    // const templates = data?.filter((item) => item?.name?.includes("study"));
     // console.log("templates---{}", templates);
 
     getRepoLoading.succeed("获取模版列表成功!");
