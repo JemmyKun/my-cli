@@ -10,7 +10,7 @@ cli study
 
 $ npm install lzk-cli -g
 
-# or yarn
+## or yarn
 
 $ yarn global add lzk-cli
 
@@ -28,7 +28,12 @@ $ lzk-cli create <name>
 示例
 $ lzk-cli create hello-cli
 
-## 发布到npm
+## 发布到 npm
+
 npm login
 npm publish
-npm version patch
+
+## 更新，修改版本，再次发布
+
+npm version patch or npm version xxxx
+npm publish
